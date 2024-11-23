@@ -3,6 +3,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe сборка активного файла",
+<<<<<<< HEAD
             "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
@@ -24,6 +25,9 @@
             "type": "cppbuild",
             "label": "C/C++: g++.exe сборка активного файла",
             "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+=======
+            "command": "D:\\Programs\\Microsoft VS Code Directory\\Etensions\\ucrt64\\bin\\g++.exe",
+>>>>>>> 380629d (save)
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -41,7 +45,11 @@
                 "kind": "build",
                 "isDefault": true
             },
+<<<<<<< HEAD
             "detail": "компилятор: C:\\msys64\\ucrt64\\bin\\g++.exe"
+=======
+            "detail": "Задача создана отладчиком."
+>>>>>>> 380629d (save)
         }
     ],
     "version": "2.0.0"
