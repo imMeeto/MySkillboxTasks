@@ -41,15 +41,39 @@
             "problemMatcher": [
                 "$gcc"
             ],
+            "group": "build",
+            "detail": "Задача создана отладчиком."
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe сборка активного файла",
+            "command": "D:\\Programs\\Microsoft VS Code Directory\\Etensions\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
 <<<<<<< HEAD
+<<<<<<< HEAD
             "detail": "компилятор: C:\\msys64\\ucrt64\\bin\\g++.exe"
 =======
             "detail": "Задача создана отладчиком."
 >>>>>>> 380629d (save)
+=======
+            "detail": "компилятор: D:\\Programs\\Microsoft VS Code Directory\\Etensions\\ucrt64\\bin\\g++.exe"
+>>>>>>> b0cefcd (save)
         }
     ],
     "version": "2.0.0"
