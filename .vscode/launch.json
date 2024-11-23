@@ -10,6 +10,7 @@
       "externalConsole": true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "cwd": "d:/Programs/Microsoft VS Code Directory/VSC Projects/GitHub Skillbox Tasks/SKILLBOX TASKS/Page_4.2_Task_1_folder_inprogress",
       "program": "d:/Programs/Microsoft VS Code Directory/VSC Projects/GitHub Skillbox Tasks/SKILLBOX TASKS/Page_4.2_Task_1_folder_inprogress/build/Debug/outDebug",
 =======
@@ -20,6 +21,10 @@
       "cwd": "d:/Programs/Microsoft VS Code Directory/VSC Projects/GitHub Skillbox Tasks",
       "program": "d:/Programs/Microsoft VS Code Directory/VSC Projects/GitHub Skillbox Tasks/build/Debug/outDebug",
 >>>>>>> 380629d (save)
+=======
+      "cwd": "d:/Programs/Microsoft VS Code Directory/VSC Projects/GitHub Skillbox Tasks/SKILLBOX TASKS/Page_4.2_Task_1_folder_inprogress",
+      "program": "d:/Programs/Microsoft VS Code Directory/VSC Projects/GitHub Skillbox Tasks/SKILLBOX TASKS/Page_4.2_Task_1_folder_inprogress/build/Debug/outDebug",
+>>>>>>> 676e07c (save)
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
