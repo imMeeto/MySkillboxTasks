@@ -8,8 +8,13 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
+<<<<<<< HEAD
       "cwd": "d:/Programs/Microsoft VS Code Directory/VSC Projects/GitHub Skillbox Tasks/SKILLBOX TASKS/Page_4.2_Task_1_folder_inprogress",
       "program": "d:/Programs/Microsoft VS Code Directory/VSC Projects/GitHub Skillbox Tasks/SKILLBOX TASKS/Page_4.2_Task_1_folder_inprogress/build/Debug/outDebug",
+=======
+      "cwd": ".",
+      "program": "build/Debug/outDebug",
+>>>>>>> 91e3e5a (Переместил файлы)
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

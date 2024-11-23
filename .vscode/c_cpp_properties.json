@@ -5,7 +5,11 @@
       "includePath": [
         "${workspaceFolder}/**"
       ],
+<<<<<<< HEAD
       "compilerPath": "C:/msys64/ucrt64/bin/gcc.exe",
+=======
+      "compilerPath": "D:/Programs/Microsoft VS Code Directory/Etensions/ucrt64/bin/gcc.exe",
+>>>>>>> 91e3e5a (Переместил файлы)
       "cStandard": "${default}",
       "cppStandard": "${default}",
       "intelliSenseMode": "windows-gcc-x64",
