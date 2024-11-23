@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": ".",
-      "program": "build/Debug/outDebug",
+      "cwd": "d:/Programs/Microsoft VS Code Directory/VSC Projects/GitHub Skillbox Tasks",
+      "program": "d:/Programs/Microsoft VS Code Directory/VSC Projects/GitHub Skillbox Tasks/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
