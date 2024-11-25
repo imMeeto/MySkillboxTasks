@@ -21,22 +21,22 @@ int main() {
     std::cout << "Введите стоимость доставки: ";
     std::cin >> deliveryCost;
 
-    int fullItemPrice = firstItemPrice + secondItemPrice + thirdItemPrice;
-    int lastPrice = fullItemPrice + deliveryCost;
-    lastPrice = fullItemPrice + deliveryCost;
+    int fullItemPrice = firstItemPrice + secondItemPrice + thirdItemPrice + deliveryCost;
     
     if (fullItemPrice >= 10000)
     {
-        lastPrice = fullItemPrice - (fullItemPrice * (10/100));
-        std::cout << "Стоимость товара превышает 10000 рублей, поэтому вы получаете скидку 10%!" << "\n";
+        float discount = fullItemPrice * 0.1;
+        float lastPriceFirst = fullItemPrice - discount;
+        std::cout << "Стоимость товаров превышает 10000 рублей, поэтому вы получаете скидку 10%!" << "\n";
         std::cout << "Рассчитываем стоимость корзины..." << "\n";
         std::cout << "---------------------------------" << "\n";
-        std::cout << "К оплате: " << lastPrice << "\n";
+        std::cout << "К оплате: " << lastPriceFirst << "\n";
     }
         if (fullItemPrice < 10000)
         {
+        int lastPriceSecond = fullItemPrice;
             std::cout << "Рассчитываем стоимость корзины..." << "\n";
             std::cout << "---------------------------------" << "\n";
-            std::cout << "К оплате: " << lastPrice << "\n";
+            std::cout << "К оплате: " << lastPriceSecond << "\n";
         }
 }
