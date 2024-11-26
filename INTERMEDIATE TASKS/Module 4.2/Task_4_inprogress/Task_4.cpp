@@ -12,14 +12,14 @@ int main() {
   std::cout << "Введите количество уже работающих барберов:  " ;
   std::cin >> barbers;
 
-  int servedByBarber = 8;
-
   float barbersPerMonth = men / 8;
-  float needBarbers = barbersPerMonth - barbers;
   float barbersPerDay;
+  float everyDayNeededBarbers = barbersPerMonth / 30;
+  float needBarbers = barbersPerMonth - barbers;
   barbersPerDay = needBarbers / 30;
 
-  std::cout << "Так как в месяц требуется подстричь " << men << " мужчин, каждый день дожно работать " << barbersPerDay << " барберов." << "\n";
-  float necessaryToHire = needBarbers / 30 - barbers;
-  std::cout << "Так как у вас уже работает " << barbers << " барберов, необходимо нанять " << necessaryToHire << " барберов." << "\n";
+  std::cout << "Так как за месяц требуется подстричь " << men << " мужчин, ежемесячно должно работать " << barbersPerMonth << " барберов ";
+  std::cout << "или ежедневно " << everyDayNeededBarbers << " барберов." << "\n";
+  std::cout << "Так как у вас уже работает " << barbers << " барберов, необходимо нанять " << needBarbers << " барберов для ежемесячной или ";
+  std::cout << barbersPerDay << " барберов для ежедневной работы." << "\n";
 }
