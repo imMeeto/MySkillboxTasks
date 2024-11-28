@@ -20,16 +20,34 @@ int main() {
   int needBarbers = barbersPerMonth - barbers;
   barbersPerDay = needBarbers / 30;
   int deleteBarbers = barbers - barbersPerMonth;
+<<<<<<< HEAD
 
   if(barbers < barbersPerMonth) {
+=======
+  
+  if (barbers < barbersPerMonth)
+  {
+>>>>>>> a96df31 (save)
   std::cout << "Так как за месяц требуется подстричь " << men << " мужчин, ежемесячно должно работать " << barbersPerMonth << " барберов ";
   std::cout << "или " << everyDayNeededBarbers << " ежедневно." << "\n";
   std::cout << "Так как у вас уже работает " << barbers << " барберов, необходимо нанять " << needBarbers << " барберов для ежемесячной или ";
   std::cout << barbersPerDay << " для ежедневной работы!" << "\n";
+<<<<<<< HEAD
   } else {
   std::cout << "Так как за месяц требуется подстричь " << men << " мужчин, ежемесячно должно работать " << barbersPerMonth << " барберов ";
   std::cout << "или " << everyDayNeededBarbers << " ежедневно." << "\n";
   std::cout << "Так как у вас уже работает " << barbers << " барберов, нанимать никого не нужно! Вам хватает барберов для успешной работы!" << "\n";
   std::cout << "Советуем Вам сократить количество барберов на " << deleteBarbers << " для оптимизации финансов!" << "\n";
   }
+=======
+  }
+
+    if (barbers >= barbersPerMonth)
+    {
+    std::cout << "Так как за месяц требуется подстричь " << men << " мужчин, ежемесячно должно работать " << barbersPerMonth << " барберов ";
+    std::cout << "или " << everyDayNeededBarbers << " ежедневно." << "\n";
+    std::cout << "Так как у вас уже работает " << barbers << " барберов, нанимать никого не нужно! Вам хватает барберов для успешной работы!" << "\n";
+    std::cout << "Советуем Вам сократить количество барберов на " << deleteBarbers << " для оптимизации финансов!" << "\n";
+    }
+>>>>>>> a96df31 (save)
 }
