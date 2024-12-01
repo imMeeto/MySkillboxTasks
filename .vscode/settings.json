@@ -55,10 +55,6 @@
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6a18c7d (Залил практические от Skillbox)
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
     "iostream": "cpp",
@@ -106,10 +102,4 @@
     "streambuf": "cpp",
     "typeinfo": "cpp"
   }
-<<<<<<< HEAD
-=======
-  "C_Cpp_Runner.msvcSecureNoWarnings": false
->>>>>>> 91e3e5a (Переместил файлы)
-=======
->>>>>>> 6a18c7d (Залил практические от Skillbox)
 }
