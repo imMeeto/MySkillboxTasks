@@ -35,16 +35,16 @@ int main() {
   int everyDayNeededBarbers = barbersPerMonth / 30;
 
 		if (everyDayNeededBarbers % 30 != 0) {
-    		everyDayNeededBarbers ++; // Увеличиваем на 1, если есть остаток
+    		everyDayNeededBarbers ++; // увеличиваем на 1, если есть остаток
     }
 
 	int needBarbers = barbersPerMonth - barbers;
   int barbersPerDay = needBarbers / 30;
 
     if (barbersPerDay % 30 != 0) {
-        barbersPerDay ++; // Увеличиваем на 1, если есть остаток
+        barbersPerDay ++; // увеличиваем на 1
     }
-    if (barbersPerDay == 0) { // Увеличиваем на 1, если значение равно 0
+    if (barbersPerDay == 0) { // увеличиваем на 1, если значение равно 0
         barbersPerDay ++;
     }
     
