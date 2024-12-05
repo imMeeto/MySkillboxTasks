@@ -34,20 +34,25 @@ int main() {
   int mansPerBarber = 8; // один человек в час, смена 8 часов
 
   // Сколько человек успеет постричь барбер за месяц?
-  int mansPerBarbePerMonth = mansPerBarber * 30;
-  std::cout << "Один барбер стрижет столько клиентов в месяц " << mansPerBarbePerMonth << "\n";
+  int mansPerBarberPerMonth = mansPerBarber * 30;
+  std::cout << "Один барбер стрижет столько клиентов в месяц " << mansPerBarberPerMonth << "\n";
 
   // Сколько нужно барберов чтобы постричь mensCount человек в месяц?
-  int requiredBarbersCount = mensCount / mansPerBarbePerMonth;
-  if (requiredBarbersCount * mansPerBarbePerMonth < mensCount) {
+  int requiredBarbersCount = mensCount / mansPerBarberPerMonth;
+  if (requiredBarbersCount * mansPerBarberPerMonth < mensCount) {
   requiredBarbersCount += 1;
+  }
+
+  if (mensCount % mansPerBarberPerMonth != 0)
+  {
+    requiredBarbersCount + 1;
   }
 
   std::cout << "Необходимое число барберов: " << requiredBarbersCount << "\n";
 
   // Сколько человек успеют постричь requiredBarbersCount за месяц?
   std::cout << requiredBarbersCount << " барбера могут постричь " <<
-  requiredBarbersCount * mansPerBarbePerMonth << " мужчин за месяц!\n";
+  requiredBarbersCount * mansPerBarberPerMonth << " мужчин за месяц!\n";
 
   // Сравниваем с количестом имеющихся барберов
   if (requiredBarbersCount > barbersCount) {
