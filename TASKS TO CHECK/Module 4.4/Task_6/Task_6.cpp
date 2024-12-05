@@ -2,7 +2,7 @@
 
 int main() {
   int people;
-  int barbers;
+  int barbersCount;
   std::cout << "---Рассчет необходимого количества барберов.---" << "\n";
 
     while (true) {
@@ -15,13 +15,13 @@ int main() {
         } 
     }
 
-  int men = people / 2;
-  std::cout << "По статистике, в городе проживает 50% мужчин, поэтому мужчин: " << men << "\n";
+  int mensCount = people / 2;
+  std::cout << "По статистике, в городе проживает 50% мужчин, поэтому мужчин: " << mensCount << "\n";
 
     while (true) {
       std::cout << "Введите количество уже работающих барберов: ";
-      std::cin >> barbers;
-        if (barbers < 0) {
+      std::cin >> barbersCount;
+        if (barbersCount < 0) {
           std::cout << "Вы ввели неверное значение! Если у вас нет барберов, то введите 0." << "\n";
         } else {
           break;
@@ -31,35 +31,30 @@ int main() {
   std::cout << "Производим рассчет..." << "\n";
   std::cout << "------------------------------------------------" << "\n";
 
-  int barbersPerMonth = men / 8;
-  int everyDayNeededBarbers = barbersPerMonth / 30;
+  int mansPerBarber = 8; // один человек в час, смена 8 часов
 
-		if (everyDayNeededBarbers % 30 != 0) {
-    		everyDayNeededBarbers ++; // увеличиваем на 1, если есть остаток
-    }
+  // Сколько человек успеет постричь барбер за месяц?
+  int mansPerBarbePerMonth = mansPerBarber * 30;
+  std::cout << "Один барбер стрижет столько клиентов в месяц " << mansPerBarbePerMonth << "\n";
 
-	int needBarbers = barbersPerMonth - barbers;
-  int barbersPerDay = needBarbers / 30;
+  // Сколько нужно барберов чтобы постричь mensCount человек в месяц?
+  int requiredBarbersCount = mensCount / mansPerBarbePerMonth;
+  if (requiredBarbersCount * mansPerBarbePerMonth < mensCount) {
+  requiredBarbersCount += 1;
+  }
 
-    if (barbersPerDay % 30 != 0) {
-        barbersPerDay ++; // увеличиваем на 1
-    }
-    if (barbersPerDay == 0) { // увеличиваем на 1, если значение равно 0
-        barbersPerDay ++;
-    }
-    
-  int deleteBarbers = barbers - barbersPerMonth;
+  std::cout << "Необходимое число барберов: " << requiredBarbersCount << "\n";
 
-	std::cout << "Так как за месяц требуется подстричь " << men << " мужчин, ежемесячно должно работать " << barbersPerMonth << " барберов ";
-  std::cout << "или " << everyDayNeededBarbers << " ежедневно." << "\n";
+  // Сколько человек успеют постричь requiredBarbersCount за месяц?
+  std::cout << requiredBarbersCount << " барбера могут постричь " <<
+  requiredBarbersCount * mansPerBarbePerMonth << " мужчин за месяц!\n";
 
-      if (barbers < barbersPerMonth) {
-        std::cout << "Так как у вас уже работает " << barbers << " барберов, необходимо нанять " << needBarbers << " барберов для ежемесячной или ";
-        std::cout << barbersPerDay << " для ежедневной работы!" << "\n";
-      } else if (barbers == barbersPerMonth) {
-        std::cout << "Так как у вас уже работает " << barbers << " барберов, нанимать никого не нужно! У вас ровно столько барберов, сколько нужно для успешной работы!" << "\n";
-      } else {
-        std::cout << "Так как у вас уже работает " << barbers << " барберов, нанимать никого не нужно! Вам хватает барберов для успешной работы!" << "\n";
-        std::cout << "Советуем Вам сократить количество барберов на " << deleteBarbers << " для оптимизации финансов!" << "\n";
-      }
+  // Сравниваем с количестом имеющихся барберов
+  if (requiredBarbersCount > barbersCount) {
+  std::cout << "Нужно больше барберов!!!\n";
+  }
+
+  if (requiredBarbersCount <= barbersCount) {
+  std::cout << "Барберов хватает!!!\n";
+  }
 }
