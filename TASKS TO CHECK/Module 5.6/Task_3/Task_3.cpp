@@ -34,7 +34,7 @@ int main()
   
   std::cout << "----------------------------" << "\n";
 
-      std::string numberToWord[] = {
+      std::string nameOfDay[] = {
       "Понедельник",
       "Вторник",
       "Среда",
@@ -55,9 +55,9 @@ int main()
     if (currentDay == 6 || currentDay == 7 ||      // сб или вс
         (dayOfMounth >= 1 && dayOfMounth <= 5) ||  // 1-5 мая
         (dayOfMounth >= 8 && dayOfMounth <= 10)) { // 8-10 мая
-        std::cout << numberToWord[currentDay - 1] << " является выходным в мае." << "\n";
+        std::cout << nameOfDay[currentDay - 1] << " является выходным в мае." << "\n";
     } else {
-        std::cout << numberToWord[currentDay - 1] << " не является выходным в мае." << "\n"; 
+        std::cout << nameOfDay[currentDay - 1] << " не является выходным в мае." << "\n"; 
     }
 
   return 0;
