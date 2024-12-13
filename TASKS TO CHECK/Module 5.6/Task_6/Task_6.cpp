@@ -6,7 +6,7 @@ int main() {
   int currentDay;
   int currentMonth;
   int currentYear;
-  std::cout << "Введите сегодняшнюю дату." << "\n";
+  std::cout << "Введите сегодняшнюю дату: " << "\n";
   std::cout << "День: ";
   std::cin >> currentDay;
   std::cout << "Месяц: ";
