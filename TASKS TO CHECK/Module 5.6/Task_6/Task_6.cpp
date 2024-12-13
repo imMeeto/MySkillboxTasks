@@ -1,30 +1,30 @@
 #include <iostream>
 
 int main() {
-  std::cout << "--- Проверьте возраст покупателя ---" << "\n";
+  std::cout << "--- Проверьте можно ли продавать алкоголь покупателю ---" << "\n";
 
-  int day;
-  int month;
-  int year;
+  int currentDay;
+  int currentMonth;
+  int currentYear;
   std::cout << "Введите сегодняшнюю дату." << "\n";
   std::cout << "День: ";
-  std::cin >> day;
+  std::cin >> currentDay;
   std::cout << "Месяц: ";
-  std::cin >> month;
+  std::cin >> currentMonth;
   std::cout << "Год: ";
-  std::cin >> year;
+  std::cin >> currentYear;
 
     while (true) {
-      if ((day < 1 || day > 31) ||
-          (month < 1 || month > 12) ||
-          (year < 1900 || year > 2024)) {
+      if ((currentDay < 1 || currentDay > 31) ||
+          (currentMonth < 1 || currentMonth > 12) ||
+          (currentYear < 1900 || currentYear > 2024)) {
             std::cout << "Некорректная дата. Пожалуйста, введите корректную дату." << "\n";
               std::cout << "День: ";
-              std::cin >> day;
+              std::cin >> currentDay;
               std::cout << "Месяц: ";
-              std::cin >> month;
+              std::cin >> currentMonth;
               std::cout << "Год: ";
-              std::cin >> year;
+              std::cin >> currentYear;
       } else {
       break;
       }
@@ -59,14 +59,15 @@ int main() {
 
   std::cout << "-------------------------" << "\n";
 
-  int age = year - birthYear;
-
-    // Проверка, был ли день рождения в этом году
-    if (month < birthMonth || (month == birthMonth && day < birthDay)) {
-        age--;
-    }
-
-    std::cout << "Возраст покупателя: " << age << " лет." << "\n";
+if (currentYear - birthYear < 18) {
+  std::cout << "Продавать алкоголь этому покупателю нельзя!" << "\n";
+} else if (currentYear - birthYear > 18) {
+  std::cout << "Продавать алкоголь этому покупателю можно!" << "\n";
+} else if (currentMonth > birthMonth || (currentMonth == birthMonth && currentDay > birthDay)) {
+  std::cout << "Продавать алкоголь этому покупателю можно!" << "\n";
+} else {
+  std::cout << "Продавать алкоголь этому покупателю нельзя!" << "\n";
+}
 
   return 0;
 }
