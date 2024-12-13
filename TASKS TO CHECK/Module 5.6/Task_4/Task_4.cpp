@@ -32,26 +32,26 @@ int main() {
         count5000 = amountOfMoney / 5000;
         amountOfMoney %= 5000;
     }
-      if (amountOfMoney >= 2000) {
-          count2000 = amountOfMoney / 2000;
-          amountOfMoney %= 2000;
-      }
-        if (amountOfMoney >= 1000) {
-            count1000 = amountOfMoney / 1000;
-            amountOfMoney %= 1000;
-        }
-          if (amountOfMoney >= 500) {
-              count500 = amountOfMoney / 500;
-              amountOfMoney %= 500;
-          }
-            if (amountOfMoney >= 200) {
-                count200 = amountOfMoney / 200;
-                amountOfMoney %= 200;
-            }
-              if (amountOfMoney >= 100) {
-                  count100 = amountOfMoney / 100;
-                  amountOfMoney %= 100;
-              }
+    if (amountOfMoney >= 2000) {
+        count2000 = amountOfMoney / 2000;
+        amountOfMoney %= 2000;
+    }
+    if (amountOfMoney >= 1000) {
+        count1000 = amountOfMoney / 1000;
+        amountOfMoney %= 1000;
+    }
+    if (amountOfMoney >= 500) {
+        count500 = amountOfMoney / 500;
+        amountOfMoney %= 500;
+    }
+    if (amountOfMoney >= 200) {
+        count200 = amountOfMoney / 200;
+        amountOfMoney %= 200;
+    }
+    if (amountOfMoney >= 100) {
+        count100 = amountOfMoney / 100;
+        amountOfMoney %= 100;
+    }
 
   std::cout << "----------------" << "\n";
   std::cout << "Выдано:" << "\n";
