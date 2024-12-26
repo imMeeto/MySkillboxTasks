@@ -16,17 +16,17 @@ int main() {
       }
   }
 
-	int counter = 0;
+	int count = 0;
 
   if (hour == 0) {
-      while (counter < 24) {
+      while (count < 24) {
         std::cout << "Ку-ку!" << "\n";
-        counter++;
+        count++;
       }
   } else {
-      while (counter != hour) {
+      while (count != hour) {
         std::cout << "Ку-ку!" << "\n";
-        counter++;
+        count++;
       }
   }
 }
