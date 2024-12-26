@@ -1,10 +1,10 @@
 #include <iostream>
 
 int main() {
-std::cout << "Программа: Часы с кукушкой." << "\n";
-std::cout << "Введите, который час: ";
-int hour;
-std::cin >> hour;
+	std::cout << "Программа: Часы с кукушкой." << "\n";
+	std::cout << "Введите, который час: ";
+	int hour;
+	std::cin >> hour;
 
   while (true) {
       if (hour < 0 || hour > 23) {
@@ -16,7 +16,7 @@ std::cin >> hour;
       }
   }
 
-int counter = 0;
+	int counter = 0;
 
   if (hour == 0) {
       while (counter < 24) {
@@ -29,5 +29,4 @@ int counter = 0;
         counter++;
       }
   }
-
 }
