@@ -10,18 +10,13 @@ int main () {
   std::cout << "Введите сумму долга: ";
   std::cin >> debt;
 
+    int remainingDebt = debt;
+
   // Проверка на отрицательное значение
-  while (true) {
     if (debt < 0) {
       std::cout << "Сумма долга не может быть отрицательной. Попробуйте снова.\n";
-      std::cout << "Введите сумму долга: ";
-      std::cin >> debt;
-    } else {
-      break;
-    }  
-  }
-
-  int remainingDebt = debt;
+      return 1;
+    }
 
   while (remainingDebt > 0) {
     int payment = 0;
