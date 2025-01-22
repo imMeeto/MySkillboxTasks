@@ -3,9 +3,9 @@
 int main() {
 
     int water, milk;
-    int americanoCount = 0, latteCount = 0;
     int addWater;
     int addMilk;
+    int americanoCount = 0, latteCount = 0;
 
     std::cout << "*** Кофемашина ***" << "\n";
     std::cout << "Пожалуйста, добавьте ингридиенты." << "\n";
