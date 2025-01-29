@@ -12,6 +12,12 @@ int main() {
   std::cout << "Введите количество восклицательных знаков: ";
   std::cin >> exclamationCount;
 
+if (exclamationCount > symbolCount) {
+  std::cout << "Количество восклицательных знаков не может превышать общую длинну!" << "\n";
+  return 1;
+}
+
+
   int totalTildes = symbolCount - exclamationCount;
   int leftTildes = totalTildes / 2;
   int rightTildes = totalTildes - leftTildes;
