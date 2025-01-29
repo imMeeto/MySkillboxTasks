@@ -1,5 +1,5 @@
 #include <iostream>
-
+// Бинарный поиск
 int main() {
     int low = 0;
     int high = 63;
@@ -30,6 +30,6 @@ int main() {
 
     std::cout << "Ваше число: " << low << "\n";
     std::cout << "*******************************" << "\n";
-
+    
     return 0;
 }
