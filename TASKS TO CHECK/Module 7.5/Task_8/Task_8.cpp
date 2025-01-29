@@ -1,30 +1,27 @@
 #include <iostream>
 
 int main() {
-    int height;
+  std::cout << "Программа-Ёлочка." << "\n";
 
-    // Запрос высоты ёлочки
-    std::cout << "Введите высоту ёлочки: ";
-    std::cin >> height;
+  int height;
+  std::cout << "Введите высоту ёлочки: ";
+  std::cin >> height;
+  std::cout << "\n";
 
-    // Проверка ввода
-    if (height <= 0) {
-        std::cout << "Высота должна быть положительным целым числом." << "\n";
-        return 1;
+  if (height <= 0) {
+    std::cout << "Высота ёлочки должна быть не меньше 1!" << "\n";
+    return 1;
+  }
+
+  for (int i = 1; i <= height; i++) { // Цикл по высоте
+    for (int j = 0; j < height - i; j++) { // Цикл пробелов
+      std::cout << " ";
     }
-
-    // Формирование ёлочки
-    for (int i = 1; i <= height; ++i) {
-        // Вывод пробелов
-        for (int j = 0; j < height - i; ++j) {
-            std::cout << " ";
-        }
-        // Вывод символов #
-        for (int k = 0; k < 2 * i - 1; ++k) {
-            std::cout << "#";
-        }
-        std::cout << "\n";
+    for (int k = 0; k < i * 2 - 1; k++) { // Цикл решеток
+      std::cout << "#";
     }
-
-    return 0;
+    std::cout << "\n";
+  }
+  
+  return 0;
 }
