@@ -9,21 +9,21 @@ std::cout << "\n";
                 if (col == 25) {
                     std::cout << "+"; // Пересечение осей
                 } else if (col == 49) {
-                    std::cout << ">"; // Стрелка вправо
+                    std::cout << ">"; 
                 } else {
                     std::cout << "-"; // Горизонтальная ось
                 }
             } else if (col == 25) {
                 if (row == 0) {
-                    std::cout << "^"; // Стрелка вверх
+                    std::cout << "^";
                 } else {
-                    std::cout << "|"; // Вертикальная ось
+                    std::cout << "|"; 
                 }
             } else {
                 std::cout << " "; // Пустое пространство
             }
         }
-        std::cout << "\n"; // Переход на новую строку
+        std::cout << "\n"; 
     }
 
     std::cout << "\n";
