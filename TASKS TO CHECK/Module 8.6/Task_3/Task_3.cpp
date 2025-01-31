@@ -3,18 +3,22 @@
 int main() {
   std::cout << "Производство игровых деревянных кубиков 5x5x5 см." << "\n";
 
-  float X, Y, Z;
+  const int CUBE_X = 5, CUBE_Y = 5, CUBE_Z = 5;
+  const int CUBE_FULL = CUBE_X * CUBE_Y * CUBE_Z; // основной кубик 5*5*5 см
+
+  float woodBarX, woodBarY, woodBarZ;
   std::cout << "Введите размеры бруска: " << "\n";
   std::cout << "X: ";
-  std::cin >> X;
+  std::cin >> woodBarX;
   std::cout << "Y: ";
-  std::cin >> Y;
+  std::cin >> woodBarY;
   std::cout << "Z: ";
-  std::cin >> Z;
+  std::cin >> woodBarZ;
 
-  const int CUBE = 125; // 5*5*5
-  float woodenBar = X * Y * Z;
-  float makedCubes = woodenBar / CUBE;
+  float woodBarFull = woodBarX * woodBarY * woodBarZ;
+  float makedCubes = woodBarFull / CUBE_FULL;
+
+  int willMadeCubes = makedCubes % CUBE_FULL;
 
   std::cout << "Из этого бруска можно изготовить: " << makedCubes << " кубиков." << "\n"; //должно быть 49 потому что не хватает на ещё 1.355 кубик
 
