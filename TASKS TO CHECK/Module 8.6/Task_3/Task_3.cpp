@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath> // для функции std::floor
 
 int main() {
     std::cout << "Производство игровых деревянных кубиков 5x5x5 см." << "\n";
@@ -22,9 +23,9 @@ int main() {
     }
 
     float woodBarFull = woodBarX * woodBarY * woodBarZ;
-    float makedCubes = woodBarFull / CUBE_FULL;
+    int makedCubes = static_cast<int>(std::floor(woodBarFull / CUBE_FULL)); // округление вниз до целого числа
 
-    std::cout << "Из этого бруска можно изготовить: " << static_cast<int>(makedCubes) << " кубиков." << "\n";
+    std::cout << "Из этого бруска можно изготовить: " << makedCubes << " кубиков." << "\n";
 
     // Проверка на то, сколько готовых кубиков уместится в набор (box), минимальный размер набора — 2x2x2 = 8 кубиков.
     int box = 2;
@@ -36,7 +37,7 @@ int main() {
     }
 
     // Вывод количества кубиков в наборе
-    std::cout << "Из них можно составить набор из " << (box - 1) * (box - 1) * (box - 1) << " кубиков." << "\n";
+    std::cout << "Из них можно составить набор из " << (box - 1) * (box - 1) * (box - 1) - 1 << " кубиков." << "\n";
 
     return 0;
 }
