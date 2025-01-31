@@ -23,7 +23,7 @@ int main() {
     }
 
     float woodBarFull = woodBarX * woodBarY * woodBarZ;
-    int makedCubes = static_cast<int>(std::floor(woodBarFull / CUBE_FULL)); // округление вниз до целого числа
+    int makedCubes = static_cast<int>(woodBarFull / CUBE_FULL); // округление вниз до целого числа
 
     std::cout << "Из этого бруска можно изготовить: " << makedCubes << " кубиков." << "\n";
 
@@ -37,7 +37,8 @@ int main() {
     }
 
     // Вывод количества кубиков в наборе
-    std::cout << "Из них можно составить набор из " << (box - 1) * (box - 1) * (box - 1) - 1 << " кубиков." << "\n";
+    int cubesInSet = (box - 2) * (box - 2) * (box - 2); // -2 для учета одного кубика
+    std::cout << "Из них можно составить набор из " << cubesInSet << " кубиков." << "\n";
 
     return 0;
 }
