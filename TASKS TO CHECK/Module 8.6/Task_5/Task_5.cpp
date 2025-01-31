@@ -29,7 +29,7 @@ int main() {
     totalSeconds += pace;
   }
 
-  int averagePace = std::round(static_cast<float>(totalSeconds) / kilometers); // Округрелние
+  int averagePace = std::round(static_cast<float>(totalSeconds) / kilometers); // Округрелние до ближайшего целого
 
   int minutes = averagePace / 60;
   int seconds = averagePace % 60; 
