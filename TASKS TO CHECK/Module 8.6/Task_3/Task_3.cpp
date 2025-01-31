@@ -1,33 +1,42 @@
 #include <iostream>
 
 int main() {
-  std::cout << "Производство игровых деревянных кубиков 5x5x5 см." << "\n";
+    std::cout << "Производство игровых деревянных кубиков 5x5x5 см." << "\n";
 
-  const int CUBE_X = 5, CUBE_Y = 5, CUBE_Z = 5;
-  const int CUBE_FULL = CUBE_X * CUBE_Y * CUBE_Z; // основной кубик 5*5*5 см
+    const int CUBE_X = 5, CUBE_Y = 5, CUBE_Z = 5;
+    const int CUBE_FULL = CUBE_X * CUBE_Y * CUBE_Z; // основной кубик 5*5*5 см
 
-  float woodBarX, woodBarY, woodBarZ;
-  std::cout << "Введите размеры бруска: " << "\n";
-  std::cout << "X: ";
-  std::cin >> woodBarX;
-  std::cout << "Y: ";
-  std::cin >> woodBarY;
-  std::cout << "Z: ";
-  std::cin >> woodBarZ;
+    float woodBarX, woodBarY, woodBarZ;
+    std::cout << "Введите размеры бруска: " << "\n";
+    std::cout << "X: ";
+    std::cin >> woodBarX;
+    std::cout << "Y: ";
+    std::cin >> woodBarY;
+    std::cout << "Z: ";
+    std::cin >> woodBarZ;
 
-  float woodBarFull = woodBarX * woodBarY * woodBarZ;
-  float makedCubes = woodBarFull / CUBE_FULL;
+    // Проверка на минимальный размер бруска
+    if (woodBarX < 5 || woodBarY < 5 || woodBarZ < 5) {
+        std::cout << "Размеры бруска должны быть не менее 5 см." << "\n";
+        return 1;
+    }
 
-  std::cout << "Из этого бруска можно изготовить: " << makedCubes << " кубиков." << "\n"; //должно быть 49 потому что не хватает на ещё 1.355 кубик (из примера)
+    float woodBarFull = woodBarX * woodBarY * woodBarZ;
+    float makedCubes = woodBarFull / CUBE_FULL;
 
-  // проверка на то, сколько готовых кубиков уместится в набор (box), минимальный размер набора — 2x2x2 = 8 кубиков.
-  int box;
-  int willBoxes;
-  for (box = 2; willBoxes >= makedCubes; box++) {
-    willBoxes = box*box*box;
-  }
+    std::cout << "Из этого бруска можно изготовить: " << static_cast<int>(makedCubes) << " кубиков." << "\n";
 
+    // Проверка на то, сколько готовых кубиков уместится в набор (box), минимальный размер набора — 2x2x2 = 8 кубиков.
+    int box = 2;
+    int willBoxes = 0;
 
-  std::cout << "Из них можно составить набор из " << willBoxes << " кубиков."; 
+    while (willBoxes <= makedCubes) {
+        willBoxes = box * box * box;
+        box++;
+    }
 
+    // Вывод количества кубиков в наборе
+    std::cout << "Из них можно составить набор из " << (box - 1) * (box - 1) * (box - 1) << " кубиков." << "\n";
+
+    return 0;
 }
