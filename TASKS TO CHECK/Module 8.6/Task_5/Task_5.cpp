@@ -9,7 +9,6 @@ int main() {
   std::cout << "Привет, Сэм! Сколько километров ты сегодня пробежал? ";
   std::cin >> kilometers;
 
-  // Проверка ввода на количество километров
   if (kilometers <= 0) {
     std::cout << "Количество километров должно быть положительным числом.\n";
     return 1;
@@ -30,7 +29,7 @@ int main() {
     totalSeconds += pace;
   }
 
-  int averagePace = std::round(static_cast<float>(totalSeconds) / kilometers);
+  int averagePace = std::round(static_cast<float>(totalSeconds) / kilometers); // Округрелние
 
   int minutes = averagePace / 60;
   int seconds = averagePace % 60; 
