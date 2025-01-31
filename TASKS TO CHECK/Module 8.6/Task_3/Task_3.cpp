@@ -18,20 +18,16 @@ int main() {
   float woodBarFull = woodBarX * woodBarY * woodBarZ;
   float makedCubes = woodBarFull / CUBE_FULL;
 
-  int willMadeCubes = makedCubes % CUBE_FULL;
+  std::cout << "Из этого бруска можно изготовить: " << makedCubes << " кубиков." << "\n"; //должно быть 49 потому что не хватает на ещё 1.355 кубик (из примера)
 
-  std::cout << "Из этого бруска можно изготовить: " << makedCubes << " кубиков." << "\n"; //должно быть 49 потому что не хватает на ещё 1.355 кубик
-
-  int set = 2;
-  for (int i = 0; i < set; i++) {
-    set = set*set*set;
-    if (set > makedCubes) {
-      break;
-    }
-    
+  // проверка на то, сколько готовых кубиков уместится в набор (box), минимальный размер набора — 2x2x2 = 8 кубиков.
+  int box;
+  int willBoxes;
+  for (box = 2; willBoxes >= makedCubes; box++) {
+    willBoxes = box*box*box;
   }
 
 
-  std::cout << "Из них можно составить набор из " << set << " кубиков."; //должен получиться набор из 27 кубиков
+  std::cout << "Из них можно составить набор из " << willBoxes << " кубиков."; 
 
 }
