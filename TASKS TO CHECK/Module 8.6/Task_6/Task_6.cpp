@@ -3,7 +3,7 @@
 int main() {
     std::cout << "Симулятор маятника.";
 
-    double initialAmplitude, finalAmplitude;
+    float initialAmplitude, finalAmplitude;
     int swings = 0;
 
     std::cout << "Введите начальную амплитуду (в см): ";
