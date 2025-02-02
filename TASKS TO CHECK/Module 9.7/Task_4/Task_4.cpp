@@ -3,30 +3,21 @@
 int main() {
   std::cout << "Bulls and cows game.\n";
 
-  std::string firstNumber;
-  std::string secondNumber;
+  std::string firstNumber, secondNumber;
+
+  std::cout << "Input the desired number: ";
 
   while (true) {
-    std::cout << "Input the desired number: ";
-    std::cin >> firstNumber;
-
-    if (firstNumber.length() > 4) {
-      std::cout << "Number is too long. Input 4 digits.\n";
+    if (firstNumber.length() != 4 || secondNumber.length() != 4) {
+      std::cout << "Number is too long. Input 4 digits!\n";
       continue;
     } else {
       break;
     }
   }
 
-  while (true) {
-    std::cout << "Input the second number: ";
-    std::cin >> secondNumber;
-
-    if (secondNumber.length() > 4) { 
-      std::cout << "Number is too long. Input 4 digits.\n";
-      continue;
-    } else {
-      break;
-    }
-  }
+  int bullsCount = 0;
+  int cowsCount = 0;
+  
+  return 0;
 }
