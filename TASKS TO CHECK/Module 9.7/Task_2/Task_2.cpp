@@ -1,58 +1,59 @@
 #include <iostream>
-using namespace std;
+#include <string>
 
-int main() {
-    cout << "Проверка корректности записи вещественного числа.\n";
-    string number;
-    cout << "Введите вещественное число: ";
-    cin >> number;
-
-    // Проверка на пустую строку и первый символ
-    if (number.empty() || !(number[0] >= '0' && number[0] <= '9' || number[0] == '.' || number[0] == '-')) {
-        cout << "No\n";
-        return 0;
+bool isValidRealNumber(const std::string& str) {
+    if (str.empty()) {
+        return false; // Пустая строка некорректна
     }
 
-    int dotCount = 0; // Счетчик точек
+    int length = str.length();
     bool hasDigit = false; // Флаг наличия хотя бы одной цифры
-    bool hasDigitAfterDot = false; // Флаг наличия цифр после точки
+    bool hasDot = false;   // Флаг наличия точки
 
-    for (int i = 0; i < number.length(); i++) {
-        if (number[i] == '.') {
-            dotCount++;
-            if (dotCount > 1) { // Более одной точки
-                cout << "No\n";
-                return 0;
-            }
-        } else if (number[i] >= '0' && number[i] <= '9') {
-            hasDigit = true; // Есть хотя бы одна цифра
-            if (dotCount == 1) {
-                hasDigitAfterDot = true; // Цифра после точки
+    for (int i = 0; i < length; ++i) {
+        char ch = str[i];
+
+        if (i == 0) {
+            // Проверка первого символа
+            if (ch == '-' || ch == '.' || (ch >= '0' && ch <= '9')) {
+                if (ch >= '0' && ch <= '9') {
+                    hasDigit = true;
+                }
+                if (ch == '.') {
+                    hasDot = true;
+                }
+            } else {
+                return false; // Недопустимый первый символ
             }
         } else {
-            cout << "No\n"; // Недопустимый символ
-            return 0;
+            // Проверка остальных символов
+            if (ch >= '0' && ch <= '9') {
+                hasDigit = true;
+            } else if (ch == '.') {
+                if (hasDot) {
+                    return false; // Точка уже была
+                }
+                hasDot = true;
+            } else {
+                return false; // Недопустимый символ
+            }
         }
     }
 
-    // Если строка начинается с минуса, проверяем, чтобы после него были цифры или точка с цифрами
-    if (number[0] == '-') {
-        if (number.length() == 1) { // Если только минус без цифр
-            cout << "No\n";
-            return 0;
-        }
-        if (dotCount == 1 && !hasDigitAfterDot) { // Если есть точка, но нет цифр после нее
-            cout << "No\n";
-            return 0;
-        }
+    // Хотя бы одна цифра должна быть
+    return hasDigit;
+}
+
+int main() {
+    std::string input;
+    std::cout << "Введите строку: ";
+    std::cin >> input;
+
+    if (isValidRealNumber(input)) {
+        std::cout << "Yes" << std::endl;
+    } else {
+        std::cout << "No" << std::endl;
     }
 
-    // Проверка на наличие хотя бы одной цифры
-    if (!hasDigit) {
-        cout << "No\n";
-        return 0;
-    }
-
-    cout << "Yes\n"; // Все проверки пройдены успешно
     return 0;
 }
