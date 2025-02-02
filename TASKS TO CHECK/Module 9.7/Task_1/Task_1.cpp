@@ -5,8 +5,8 @@ int main() {
 
   std::string depTime;
   std::string arrTime;
-  int totalDepMinutes;
-  int totalArrMinutes;
+  int totalDepMinutes = 0;
+  int totalArrMinutes = 0;
 
   std::cout << "Input departure time (HH:MM): ";
   std::cin >> depTime;
@@ -48,17 +48,16 @@ int main() {
     }
   }
 
+  if (totalArrMinutes < totalDepMinutes) {
+    totalArrMinutes += 1440; // Add 24 hours to display number of days
+  }
+
   int tripMinutes = totalArrMinutes - totalDepMinutes; // The trip time in minutes
 
-    // Get number of days
-    int days = tripMinutes / 1440;
-    tripMinutes = tripMinutes % 1440; 
-
-    // Get number of hours 
-    int hours = tripMinutes / 60;
-
-    // Get number of minutes 
-    int mins = tripMinutes % 60;
+  int days = tripMinutes / 1440; // Get number of days
+  tripMinutes = tripMinutes % 1440; 
+  int hours = tripMinutes / 60; // Get number of hours 
+  int mins = tripMinutes % 60; // Get number of minutes
 
   std::cout << "The trip was " << days << " days, " << hours << " hours, and " << mins << " minutes.\n";
 
