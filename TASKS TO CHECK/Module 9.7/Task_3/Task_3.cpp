@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream> 
 
 int main() {
   std::cout << "A program-counter the number of words in a text.\n";
@@ -10,19 +10,18 @@ int main() {
   std::cout << "Input words: ";
   std::getline(std::cin, str);
 
-  for (char ch : str) {
-    if (ch != ' ') {
-      if (!inWord) {
-        ++wordsCount;
-        inWord = true;
+  for (char ch : str) { // Перебор каждого символа в строке
+    if (ch != ' ') { 
+      if (!inWord) { // Если мы не находимся внутри слова
+        ++wordsCount; // Увеличиваем счетчик слов
+        inWord = true; // Мы внутри слова
       }
     } else {
-      inWord = false;
+      inWord = false; // Если пробел мы не внутри слова
     }
   }
 
-  std::cout << "Ответ: " << wordsCount << "\n";
-  
+  std::cout << "Answer: " << wordsCount << "\n";
 
   return 0;
 }
