@@ -27,7 +27,7 @@ int main() {
         std::cout << "Error! Input correct format!\n";
         continue;
       } else {
-        totalDepMinutes = 60 * depHours + depMinutes; // Get all departure time in minutes
+        totalDepMinutes = 60 * depHours + depMinutes; // Время отправления в минутах
         break;
       }
     }
@@ -52,20 +52,20 @@ int main() {
         std::cout << "Error! Input correct format!\n";
         continue;
       } else {
-        totalArrMinutes = 60 * arrHours + arrMinutes; // Get all arrival time in minutes
+        totalArrMinutes = 60 * arrHours + arrMinutes; // Время прибытия в минутах
         break;
       }
     }
   }
 
   if (totalArrMinutes < totalDepMinutes) {
-    totalArrMinutes += 1440; // Add 24 hours to display number of days
+    totalArrMinutes += 1440; // Добавляем 24 часа
   }
 
-  int tripMinutes = totalArrMinutes - totalDepMinutes; // The trip time in minutes
+  int tripMinutes = totalArrMinutes - totalDepMinutes; // Время пути в минутах
 
-  int hours = tripMinutes / 60; // Get number of hours 
-  int mins = tripMinutes % 60; // Get number of minutes
+  int hours = tripMinutes / 60; 
+  int mins = tripMinutes % 60; 
 
   std::cout << "The trip was " << hours << " hours, and " << mins << " minutes.\n";
 
