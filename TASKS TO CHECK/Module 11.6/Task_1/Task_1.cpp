@@ -6,7 +6,7 @@ std::string encrypt_caesar(std::string text, int code) {
 
   for (char c : text) {
     if ('A'<= c && c <= 'Z') {
-      char new_char = (c - 'A' + code) % 26 + 'A';
+      char new_char = (c - 'A' + code) % 26 + 'A'; // Shift the character by code, %26 for looping, +a for converting back to a character
       result += new_char;
     } else if ('a' <= c && c <= 'z') {
       char new_char = (c - 'a' + code) % 26 + 'a';
