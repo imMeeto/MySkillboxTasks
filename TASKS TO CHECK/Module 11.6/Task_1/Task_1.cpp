@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 
 std::string encrypt_caesar(std::string text, int code) {
   code = code % 26;
