@@ -98,16 +98,16 @@ bool isValidEmail(std::string email) {
 }
 
 int main() { 
-  std::cout << "*Убедитесь, что адрес электронной почты указан правильно.*\n"; 
+  std::cout << "*Make sure that the email address is correct.*\n"; 
 
   std::string emailMain; 
-  std::cout << "Введите ваш адрес электронной почты: ";
+  std::cout << "Enter your email address: ";
   std::getline(std::cin, emailMain);
 
   if (isValidEmail(emailMain)) {
-    std::cout << "Да!\n";
+    std::cout << "Yes!\n";
   } else {
-    std::cout << "Нет!\n";
+    std::cout << "No!\n";
   }
   return 0;
 }
