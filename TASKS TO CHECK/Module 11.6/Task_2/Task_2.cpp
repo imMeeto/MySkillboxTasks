@@ -4,40 +4,38 @@
 const std::string allowedCharsInLeft = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.-!#$%&'*+/=?^_`{|}~";
 const std::string allowedCharsInRight = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.-";
 
+// Функция для извлечения левой части email (до '@')
 std::string leftPart(std::string email) {
   std::string left = "";
-
   for (char c : email) {
     if (c == '@') {
       break;
     }
     left += c;
   }
-
   return left;
 }
 
+// Функция для извлечения правой части email (после '@')
 std::string rightPart(std::string email) {
   std::string right = "";
-  bool foundAt = false; // Flag to track if '@' has been found
-
+  bool foundAt = false; 
   for (char c : email) {
-    if (foundAt) {
+    if (foundAt) { 
       right += c;
     }
-
-    if (c == '@') {
+    if (c == '@') { // Когда находим '@', устанавливаем флаг
       foundAt = true;
     }
   }
-
   return right;
 }
 
+// Функция проверки допустимости символов в части email
 bool isValidPart(std::string part, std::string allowedChars) {
-  for (char c : part) {
+  for (char c : part) { 
     bool found = false;
-    for (char allowed : allowedChars) {
+    for (char allowed : allowedChars) { // Проверяем, является ли символ допустимым
       if (c == allowed) {
         found = true;
         break;
@@ -47,28 +45,27 @@ bool isValidPart(std::string part, std::string allowedChars) {
       return false;
     }
   }
-
   return true;
 }
 
+// Функция проверки корректности использования точек в части email
 bool hasValidDots(std::string part) {
   if (part.empty()) {
     return false;
   }
-
   if (part.back() == '.' || part.front() == '.') {
     return false;
   }
   
-  for (int i = 0; i < part.length() - 1; i++) {
+  for (int i = 0; i < part.length() - 1; i++) { // Проверяем, нет ли двух точек подряд
     if (part[i] == '.' && part[i + 1] == '.') {
       return false;
     }
   }
-
   return true;
 }
 
+// Функция проверки валидности email
 bool isValidEmail(std::string email) {
   std::string leftValidPart = leftPart(email);
   std::string rightValidPart = rightPart(email);
@@ -97,22 +94,20 @@ bool isValidEmail(std::string email) {
     return false;
   }
   
-  return true;
+  return true; 
 }
 
-int main() {
-  std::cout << "*Make sure that the email address is correct.*\n";
+int main() { 
+  std::cout << "*Убедитесь, что адрес электронной почты указан правильно.*\n"; 
 
-  std::string emailMain;
-
-  std::cout << "Enter your email address: ";
+  std::string emailMain; 
+  std::cout << "Введите ваш адрес электронной почты: ";
   std::getline(std::cin, emailMain);
 
   if (isValidEmail(emailMain)) {
-    std::cout << "Yes!\n";
+    std::cout << "Да!\n";
   } else {
-    std::cout << "No!\n";
+    std::cout << "Нет!\n";
   }
-
   return 0;
 }
