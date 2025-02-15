@@ -6,7 +6,7 @@ int main() {
 
     // Ввод 15 дробных чисел
     std::cout << "*Sort the numbers!*\n";
-    std::cout << "Input 15 fractional numbers: \n";
+    std::cout << "Input 15 float numbers: \n";
     for (int i = 0; i < SIZE; i++) {
       std::cin >> arr[i];
     }
