@@ -1,10 +1,9 @@
 #include <iostream>
 
 int main() {
-    const int SIZE = 15; // Размер массива
-    float arr[SIZE];     // Массив для хранения чисел
+    const int SIZE = 15;
+    float arr[SIZE];
 
-    // Ввод 15 дробных чисел
     std::cout << "*Sort the numbers!*\n";
     std::cout << "Input 15 float numbers: \n";
     for (int i = 0; i < SIZE; i++) {
@@ -25,7 +24,6 @@ int main() {
         }
     }
 
-    // Вывод отсортированного массива
     std::cout << "Sorted numbers: ";
     for (int i = 0; i < SIZE; i++) {
       std::cout << arr[i] << " ";
