@@ -12,15 +12,15 @@ int main() {
   plates[0][1] += 1;
 
   chairs[0][4] += 1; // Добавлен стул для ребёнка на пятое место первого ряда
-  plates[1][2] -= 1; // Украдена ложка с третьего места второго ряда
+  utensils[1][2] -= 1; // Украдена ложка с третьего места второго ряда
   utensils[0][0] -= 1; // VIP-персона поделилась ложкой
   utensils[1][2] += 1; // Ложка передана тому, у кого её украли
-  plates[0][0] -= 1;
+  plates[0][0] -= 1; // Официант забрал десертную тарелку у VIP-персоны
 
   std::cout << "Utensils in result: \n";
-  for (int i = 0; i < 2; i++)
+  for (int i = 0; i < 2; ++i)
   {
-    for (int j = 0; j < 6; j++)
+    for (int j = 0; j < 6; ++j)
     {
       std::cout << utensils[i][j] << " ";
     }
@@ -28,9 +28,9 @@ int main() {
   }
   
   std::cout << "Plates in result: \n";
-  for (int i = 0; i < 2; i++)
+  for (int i = 0; i < 2; ++i)
   {
-    for (int j = 0; j < 6; j++)
+    for (int j = 0; j < 6; ++j)
     {
       std::cout << plates[i][j] << " ";
     }
@@ -38,9 +38,9 @@ int main() {
   }
   
   std::cout << "Chairs in result: \n";
-  for (int i = 0; i < 2; i++)
+  for (int i = 0; i < 2; ++i)
   {
-    for (int j = 0; j < 6; j++)
+    for (int j = 0; j < 6; ++j)
     {
       std::cout << chairs[i][j] << " ";
     }
