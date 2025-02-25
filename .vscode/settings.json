@@ -112,5 +112,8 @@
     "span": "cpp",
     "text_encoding": "cpp",
     "variant": "cpp"
+  },
+  "[snippets]": {
+    "editor.snippetSuggestions": "top"
   }
 }
