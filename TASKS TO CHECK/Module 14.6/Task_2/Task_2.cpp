@@ -1,20 +1,26 @@
 #include <iostream>
 
-bool checkWin(char board[3][3], char player) {
-    for (int i = 0; i < 3; i++) {
-        if (board[i][0] == player && board[i][1] == player && board[i][2] == player) {
+bool checkWin(char board[3][3], char player) 
+{
+    for (int i = 0; i < 3; i++) 
+    {
+        if (board[i][0] == player && board[i][1] == player && board[i][2] == player) 
+        {
             return true; // Проверка строк
         }
-        if (board[0][i] == player && board[1][i] == player && board[2][i] == player) {
+        if (board[0][i] == player && board[1][i] == player && board[2][i] == player) 
+        {
             return true; // Проверка столбцов
         }
     }
     return false;
 }
 
-int main() {
+int main() 
+{
   std::cout << "*The tic tac toe game!*";
-    char board[3][3] = {
+    char board[3][3] = 
+    {
         {' ', ' ', ' '},
         {' ', ' ', ' '},
         {' ', ' ', ' '}
@@ -24,12 +30,15 @@ int main() {
     char currentPlayer = 'X'; // Начинает игрок X
     bool gameOver = false; // Флаг завершения игры
 
-    while (moves < 9 && !gameOver) {
+    while (moves < 9 && !gameOver) 
+    {
         std::cout << "\n";
         std::cout << "Current game board: \n";
         std::cout << "\n";
-        for (int i = 0; i < 3; ++i) {
-            for (int j = 0; j < 3; ++j) {
+        for (int i = 0; i < 3; ++i) 
+        {
+            for (int j = 0; j < 3; ++j) 
+            {
                 std::cout << board[i][j];
                 if (j < 2) std::cout << "|";
             }
@@ -43,11 +52,13 @@ int main() {
         std::cin >> row >> col;
 
         // Проверка корректности координат и доступности клетки
-        if (row >= 1 && row <= 3 && col >= 1 && col <= 3 && board[row - 1][col - 1] == ' ') {
+        if (row >= 1 && row <= 3 && col >= 1 && col <= 3 && board[row - 1][col - 1] == ' ') 
+        {
           board[row - 1][col - 1] = currentPlayer;
           moves++;
 
-            if (checkWin(board, currentPlayer)) {
+            if (checkWin(board, currentPlayer)) 
+            {
                 std::cout << "\n";
                 std::cout << "Player " << currentPlayer << " wins! \n";
                 gameOver = true;
@@ -62,7 +73,8 @@ int main() {
     }
 
     // Если все ходы сделаны и никто не победил
-    if (!gameOver) {
+    if (!gameOver) 
+    {
         std::cout << "\n";
         std::cout << "Draw!\n";
     }
@@ -70,8 +82,10 @@ int main() {
     std::cout << "\n";
     std::cout << "Result game board: \n";
     std::cout << "\n";
-    for (int i = 0; i < 3; ++i) {
-        for (int j = 0; j < 3; ++j) {
+    for (int i = 0; i < 3; ++i) 
+    {
+        for (int j = 0; j < 3; ++j) 
+        {
             std::cout << board[i][j];
             if (j < 2) std::cout << "|";
         }
