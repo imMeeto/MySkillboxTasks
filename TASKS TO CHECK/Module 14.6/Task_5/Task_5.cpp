@@ -37,7 +37,7 @@ void popRegion (int startX, int startY, int endX, int endY)
 
   for (int i = startX; i <= endX; ++i)
   {
-    for (int j = startY; j <+ endY; ++j)
+    for (int j = startY; j <= endY; ++j)
     {
       if (bubbleWrap[i][j])
       {
