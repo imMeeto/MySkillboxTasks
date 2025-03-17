@@ -1,10 +1,9 @@
 #include <iostream>
 #include <vector>
 
-int main() 
-{
-  int utensils[2][6] = {{4, 3, 3, 3, 3, 3}, {3, 3, 3, 3, 3, 3}};
-  int plates[2][6] = {{3, 2, 2, 2, 2, 2}, {2, 2, 2, 2, 2, 2}};
+int main() {
+  int utensils[2][6] = {{3, 3, 3, 3, 3, 3}, {3, 3, 3, 3, 3, 3}};
+  int plates[2][6] = {{2, 2, 2, 2, 2, 2}, {2, 2, 2, 2, 2, 2}};
   int chairs[2][6] = {{1, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1}};
 
   utensils[0][0] += 1;
@@ -17,7 +16,7 @@ int main()
   utensils[0][0] -= 1; // VIP-персона поделилась ложкой
   utensils[1][2] += 1; // Ложка передана тому, у кого её украли
   plates[0][0] -= 1; // Официант забрал десертную тарелку у VIP-персоны
-  
+
   std::cout << "Utensils in result: \n";
   for (int i = 0; i < 2; ++i)
   {
@@ -49,4 +48,4 @@ int main()
   }
 
   return 0;
-}
+}       
