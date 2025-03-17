@@ -33,7 +33,8 @@ void printSortedByAbsoluteValue(std::vector<int> nums)
     std::cout << "\n";
 }
 
-int main() {
+int main()
+{
     std::cout << "*Sort the array in ascending order of the modulus of the numbers.*\n";
     std::cout << "*Array: {−100, −50, −5, 1, 10, 15}*\n";
     std::cout << "Result: ";
