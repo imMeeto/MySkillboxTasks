@@ -37,12 +37,10 @@ int main()
         } 
         else if (input == -2) 
         {
-            // Завершение программы
             break;
         } 
         else 
         {
-            // Добавление нового числа в вектор
             if (nums.size() < 5) 
             {
                 nums.push_back(input); // Добавляем число, если в векторе меньше пяти чисел
@@ -51,7 +49,7 @@ int main()
             else if (input < nums[4]) 
             {
                 nums[4] = input; // Заменяем максимальное число в векторе
-                std::sort(nums.begin(), nums.end()); // Сортируем вектор
+                std::sort(nums.begin(), nums.end());
             }
         }
     }
