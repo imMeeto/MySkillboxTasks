@@ -41,6 +41,10 @@ int main()
             switches_state &= ~WATER_PIPE_HEATING;
             std::cout << "Water pipe heating OFF!" << "\n";
         }
+        else if (temp_outside > 5 && !(switches_state & WATER_PIPE_HEATING))
+        {
+            std::cout << "Water pipe heating OFF!" << "\n";
+        }
 
         // Управление садовым освещением
         bool is_evening = (time % 24 >= 16 || time % 24 < 5);
