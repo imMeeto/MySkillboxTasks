@@ -2,7 +2,7 @@
 
 void reverse(int* arr)
 {
-  for (int i = 0; i < 5; ++i)
+  for (int i = 0; i < 5; ++i) // До половины массива
   {
     int temp = arr[i];
     arr[i] = arr[9 - i];
