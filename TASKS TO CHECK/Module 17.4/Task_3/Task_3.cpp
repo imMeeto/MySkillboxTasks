@@ -4,25 +4,30 @@ bool substr(const char* a, const char* b)
 {
   while (*a != '\0')
   {
-    while (*a != '\0' && *b != 0 && *a == *b)
+
+    const char* pa = a;
+    const char* pb = b;
+
+    while (*pa != '\0' && *pb != 0 && *pa == *pb)
     {
-      *a++;
-      *b++;
+      pa++;
+      pb++;
     }
     
-    if (*b == '\0')
+    if (*pb == '\0')
     {
       return true;
     }
-    *a++;
+
+    a++;
   }
   return false;
 }
 
 int main() 
 {
-  const char* a = "Hello world!";
-  const char* b = "wor";
+  const char* a = "11132";
+  const char* b = "112";
   const char* c = "banana";
 
   std::cout << std::boolalpha;
