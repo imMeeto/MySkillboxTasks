@@ -41,10 +41,6 @@ int main()
             switches_state &= ~WATER_PIPE_HEATING;
             std::cout << "Water pipe heating OFF!" << "\n";
         }
-        else if (temp_outside > 5 && !(switches_state & WATER_PIPE_HEATING))
-        {
-            std::cout << "Water pipe heating OFF!" << "\n";
-        }
 
         // Управление садовым освещением
         bool is_evening = (time % 24 >= 16 || time % 24 < 5);
@@ -83,6 +79,12 @@ int main()
             std::cout << "Conditioner OFF!" << "\n";
         }
 
+        // Сброс цветовой температуры в 00:00
+        if (time % 24 == 0)
+        {
+            color_temperature = 5000;
+        }
+
         // Управление внутренним освещением и цветовой температурой
         if (lights == "on")
         {
@@ -101,10 +103,6 @@ int main()
                 int end_temp = 2700;
 
                 color_temperature = start_temp + (end_temp - start_temp) * (time % 24 - start_time) / (end_time - start_time);
-            }
-            else if (time % 24 == 0)
-            {
-                color_temperature = 5000;  // Сброс в 00:00
             }
 
             std::cout << "Color temperature: " << color_temperature << "K" << "\n";
