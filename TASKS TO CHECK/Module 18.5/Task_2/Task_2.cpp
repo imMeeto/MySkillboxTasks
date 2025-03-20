@@ -10,7 +10,7 @@ int countWays(int n, int k = 3)
     // Кролик перепрыгнул нужную ступеньку, это невозможно
     if (n < 0)
     {
-        return 0;
+        return 2;
     }
 
     int ways = 0;
