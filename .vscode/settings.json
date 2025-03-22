@@ -112,7 +112,8 @@
     "span": "cpp",
     "text_encoding": "cpp",
     "variant": "cpp",
-    "cstring": "cpp"
+    "cstring": "cpp",
+    "map": "cpp"
   },
   "[snippets]": {
     "editor.snippetSuggestions": "top"
