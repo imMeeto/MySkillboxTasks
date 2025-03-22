@@ -6,6 +6,7 @@ int main()
   std::string filePath;
   std::cout << "Enter the path to the file: ";
   std::getline(std::cin, filePath);
+  std::cout << "\n";
 
   std::ifstream file;
   file.open(filePath, std::ios::binary);
