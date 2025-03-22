@@ -9,28 +9,26 @@ int main()
 
     if (!Words.is_open())
     {
-      std::cout << "Error: file 'words.txt' not found!" << "\n";
+        std::cout << "Error! The word wan not found!\n";
         return 1;
     }
-
-    std::string targetWord;
+    
     std::cout << "Input the search word: ";
-    std::cin >> targetWord;
+    std::string searchWord;
+    std::cin >> searchWord;
 
-    int count = 0;
-    std::string word;
+    int countWords = 0;
+    std::string addWord;
 
-    while (Words >> word)
+    while (Words >> addWord)
     {
-        if (word == targetWord)
+        if (searchWord == addWord)
         {
-            count++;
+            countWords++;
         }
     }
 
     Words.close();
-
-    std::cout << "Word '" << targetWord << "' occurs " << count << " times.\n";
-
-    return 0;
+    
+    std::cout << "Word " << searchWord << " occurs " << countWords << " times.\n";
 }
