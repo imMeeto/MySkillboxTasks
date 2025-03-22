@@ -6,12 +6,6 @@ int main()
 {
     std::ifstream Words;
     Words.open("C:\\VS Code\\VS Code Projects\\MySkillboxTasks\\TASKS TO CHECK\\Module 19.5\\Task_1\\Words.txt");
-
-    if (!Words.is_open())
-    {
-        std::cout << "Error! The word wan not found!\n";
-        return 1;
-    }
     
     std::cout << "Input the search word: ";
     std::string searchWord;
