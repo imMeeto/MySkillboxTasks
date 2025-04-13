@@ -2,19 +2,17 @@
 
 int countWays(int n, int k = 3)
 {
-    // Если ступенька 0 ничего не делать
-    if (n == 0)
+    if (n == 0) 
     {
         return 1;
     }
-    // Кролик перепрыгнул нужную ступеньку, это невозможно
-    if (n < 0)
+    if (n < 0) 
     {
-        return 2;
+        return 0;
     }
 
     int ways = 0;
-    for (int i = 1; i <= k; ++i)
+    for (int i = 1; i <= k; ++i) 
     {
         ways += countWays(n - i, k);
     }
@@ -30,7 +28,14 @@ int main()
     std::cout << "Enter the maximum jump length: ";
     std::cin >> k;
 
-    std::cout << "Number of ways: " << countWays(n, k) << "\n";
+    if (k <= 0)
+    {
+        std::cout << "Number of ways: " << countWays(n) << "\n";
+    } 
+    else 
+    {
+        std::cout << "Number of ways: " << countWays(n, k) << "\n";
+    }
 
     return 0;
 }
