@@ -15,7 +15,7 @@ int main()
         return 1;
     }
 
-    std::string firstName, secondName, date;
+    std::string firstName, lastName, date;
     std::string fullName;
     double amount = 0;
     double totalAmount = 0;
@@ -23,9 +23,9 @@ int main()
     std::string maxPerson;
     double maxAmount = 0;
 
-    while (file >> firstName >> secondName >> amount >> date)
+    while (file >> firstName >> lastName >> amount >> date)
     {
-        fullName = firstName + " " + secondName;
+        fullName = firstName + " " + lastName;
         totalAmount += amount;
 
         if (amount > maxAmount)
