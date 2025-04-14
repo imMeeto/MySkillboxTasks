@@ -32,9 +32,9 @@ int main()
         return 1;
     }
 
-    for (int y = 0; y < height; ++y)
+    for (int i = 0; i < height; ++i)
     {
-        for (int x = 0; x < width; ++x)
+        for (int j = 0; j < width; ++j)
         {
             file << (std::rand() % 2);
         }
