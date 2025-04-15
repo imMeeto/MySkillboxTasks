@@ -51,7 +51,7 @@ TransactionInfo getTransactionInfo()
   std::cout << "- Input first name: ";
   std::cin >> transaction.firstName;
 
-  std::cout << "- Input first name: ";
+  std::cout << "- Input last name: ";
   std::cin >> transaction.lastName;
 
   do
