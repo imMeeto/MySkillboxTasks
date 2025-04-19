@@ -113,7 +113,8 @@
     "text_encoding": "cpp",
     "variant": "cpp",
     "cstring": "cpp",
-    "map": "cpp"
+    "map": "cpp",
+    "cstdarg": "cpp"
   },
   "[snippets]": {
     "editor.snippetSuggestions": "top"
