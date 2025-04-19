@@ -13,7 +13,7 @@ int bills[NUM_DENOMINATIONS] = {0};
 
 void loadState()
 {
-  std::ifstream inFile(DATA_FILE);
+  std::ifstream inFile(DATA_FILE, std::ios::binary);
   if (inFile)
   {
     for (int i = 0; i < NUM_DENOMINATIONS; ++i)
@@ -25,7 +25,7 @@ void loadState()
 
 void saveState()
 {
-  std::ofstream outFile(DATA_FILE);
+  std::ofstream outFile(DATA_FILE, std::ios::binary);
 
     for (int i = 0; i < NUM_DENOMINATIONS; ++i)
     {
