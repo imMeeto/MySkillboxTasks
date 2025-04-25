@@ -48,7 +48,42 @@ struct Plot
   std::vector<Garage> garages;
 };
 
-int main()
+Room inputRoom()
+{
+  Room room;
+  int inputRoomType;
+
+  std::cout << "Room type (0-bedroom, 1-kitchen, 2-bathroom, 3-children's room, 4-living room): ";
+  std::cin >> inputRoomType;
+
+  room.roomType = static_cast<RoomType>(inputRoomType); //преобразуем введенное число в тип RoomType
+
+  std::cout << "Room area: ";
+  std::cin >> room.area;
+
+  return room;
+}
+
+Floor inputFloor()
+{
+  Floor floor;
+  
+  std::cout << "Ceiling height: ";
+  std::cin >> floor.ceilingHeight;
+
+  int roomCount;
+  std::cout << "Number of rooms: ";
+  std::cout << roomCount;
+
+  for (int i = 0; i < roomCount; ++i)
+  {
+    std::cout << "Room " << i + 1 << ":\n";
+    floor.rooms.push_back(inputRoom());
+  }
+  
+}
+
+int main()  
 {
 
 }
