@@ -38,7 +38,7 @@ Vector2D normalize(const Vector2D& v)
   return {v.x / len, v.y / len};
 }
 
-void printWelcomeMessage()
+int main()
 {
   std::cout << "***Mathematical vector programm.***\n\n";
   std::cout << "- Available commands:\n";
@@ -48,11 +48,6 @@ void printWelcomeMessage()
   std::cout << "length - Calculate vector length\n";
   std::cout << "normalize - Normalize a vector\n\n";
   std::cout << "- Enter command: ";
-}
-
-int main()
-{
-  printWelcomeMessage();
   
   std::string operation;
   std::cin >> operation;
