@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath>
 #include <string>
-#include <iomanip>
 
 struct Vector2D
 {
