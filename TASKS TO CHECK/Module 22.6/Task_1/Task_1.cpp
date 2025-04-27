@@ -10,9 +10,9 @@ std::map<std::string, std::vector<std::string>> nameToPhones;
 
 std::cout << "*** Phone Directory. ***\n\n";
 std::cout << "Input the query in the following formats:\n";
-std::cout << "1) 69-70-30 Ivanov — add the subscriber's phone number and last name to the directory\n";
-std::cout << "2) 69-70-30 — find out the subscriber's last name by phone number\n";
-std::cout << "3) Ivanov — find out the subscriber's phone number by last name\n\n";
+std::cout << "1) 69-70-30 Ivanov (add the subscriber's phone number and last name to the directory)\n";
+std::cout << "2) 69-70-30 (find out the subscriber's last name by phone number)\n";
+std::cout << "3) Ivanov (find out the subscriber's phone number by last name)\n\n";
 
 std::string query;
 while (std::getline(std::cin, query))
