@@ -41,5 +41,5 @@ int main()
   CHECK_PRINT_DAY(7)
 
   std::cout << "Error! Input day of the week number from 1 to 7!\n";
-  return 0;
+  return 1;
 }
