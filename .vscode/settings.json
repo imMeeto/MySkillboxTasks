@@ -118,5 +118,6 @@
   },
   "[snippets]": {
     "editor.snippetSuggestions": "top"
-  }
+  },
+  "cquery.cacheDirectory": "${workspaceFolder}/.vscode/cquery_cached_index/"
 }
