@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\VS Code\VS Code Projects\MySkillboxTasks\build\CMakeFiles\9e6e10d5d2267329a8fc58eee7e652dd\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{161549CB-E527-3BE1-8D5B-62506F222937}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

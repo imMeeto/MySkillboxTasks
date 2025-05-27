@@ -1,0 +1,3 @@
+C:/VS Code/VS Code Projects/MySkillboxTasks/build/CMakeFiles/computer_simulator.dir
+C:/VS Code/VS Code Projects/MySkillboxTasks/build/CMakeFiles/ALL_BUILD.dir
+C:/VS Code/VS Code Projects/MySkillboxTasks/build/CMakeFiles/ZERO_CHECK.dir
